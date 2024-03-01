@@ -180,12 +180,12 @@ export default {
     async changeButtonClicked () {
       this.editFlag = false
       await this.$refs.childSupa.updateSubCategory(this.selectSubCategory, this.newSubCategory)
-      this.$router.go({ path: this.$router.currentRoute.path, force: true })
+      window.location.reload(true)
     },
     async deleteButtonClicked () {
       this.deleteFlag = false
       await this.$refs.childSupa.deleteSubCategory(this.selectSubCategory)
-      this.$router.go({ path: this.$router.currentRoute.path, force: true })
+      window.location.reload(true)
     }
   },
 
@@ -250,13 +250,13 @@ p {
 }
 
 .right {
-  position: absolute;
-  top: 75px;
+  position: fixed;
+  top: 60px;
   right: 8px;
 }
 
 .editForm {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

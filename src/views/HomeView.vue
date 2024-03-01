@@ -121,7 +121,7 @@ export default {
     },
     async minusButtonClicked (category) {
       await this.$refs.childSupa.deleteCategoryList(category)
-      this.$router.go({ path: this.$router.currentRoute.path, force: true })
+      window.location.reload(true)
     },
     menuButtonClicked: function () {
       if (this.menu) {
@@ -148,7 +148,7 @@ export default {
     async changeButtonClicked () {
       this.editFlag = false
       await this.$refs.childSupa.updateCategory(this.selectCategory, this.newCategory)
-      this.$router.go({ path: this.$router.currentRoute.path, force: true })
+      window.location.reload(true)
     }
   },
 
@@ -220,13 +220,13 @@ export default {
 }
 
 .right {
-  position: absolute;
-  top: 75px;
+  position: fixed;
+  top: 60px;
   right: 8px;
 }
 
 .editForm {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

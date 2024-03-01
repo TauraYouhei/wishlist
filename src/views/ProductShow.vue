@@ -233,13 +233,13 @@ export default {
 }
 
 .right {
-  position: absolute;
-  top: 75px;
+  position: fixed;
+  top: 60px;
   right: 8px;
 }
 
 .deleteForm {
-  position: absolute;
+  position: fixed;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
