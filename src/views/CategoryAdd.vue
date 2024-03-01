@@ -1,7 +1,7 @@
 <template>
   <supabase-function ref="childSupa" />
   <v-app class="all">
-    <v-app-bar class="headerBar" color="#B0DEEC" app>
+    <v-app-bar height="50" class="headerBar" color="#B0DEEC" app>
       <v-btn outlined class="headerBar" v-on:click="backButtonClicked">戻る</v-btn>
       <v-app-bar-title class="headerBar">{{ title }}</v-app-bar-title>
       <v-btn outlined class="headerBar" v-on:click="addButtonClicked" :disabled="flag">追加</v-btn>
@@ -103,12 +103,13 @@ export default {
   height : 50px;
   width : 23%;
   margin: 0 auto;
+  margin-bottom: 4%;
 }
 
 .inputBox {
   witdh : 100%;
   height : 100px;
-  margin-top : 280px;
+  margin-top : 240px;
 }
 
 .all {

@@ -1,7 +1,7 @@
 <template>
   <supabase-function ref="childSupa" />
   <v-app class="all">
-    <v-app-bar class="headerBar" color="#B0DEEC" app>
+    <v-app-bar height="50" lass="headerBar" color="#B0DEEC" app>
       <v-btn outlined class="headerBar" v-on:click="backButtonClicked">戻る</v-btn>
       <v-app-bar-title class="headerBar">{{ $store.state.selectCategory }}</v-app-bar-title>
       <v-btn outlined class="headerBar" v-on:click="menuButtonClicked"><v-icon>mdi-dots-horizontal</v-icon></v-btn>
@@ -233,6 +233,7 @@ export default {
   height : 50px;
   width : 23%;
   margin: 0 auto;
+  margin-bottom: 4%;
 }
 
 .item {
